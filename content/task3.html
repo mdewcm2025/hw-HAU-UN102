@@ -142,13 +142,73 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Midterm << <a href='Midterm.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>Final</h1>
-<p>3. 期末協同專案執行、簡報與報告 (三人一組) (30%)</p>
-<p style="padding-left: 30px;"><span>專案題目: 網際內容管理架構下的 <a href="https://mde.tw/reeborg/world.html">Reeborg's world</a> (<a href="https://github.com/mdecycu/reeborg">原始碼</a>)<br/></span></p>
-<p style="padding-left: 60px;">利用 uwsgi 配置分組學員執行 cmsimde 動態內容管理系統編輯</p>
-<p style="padding-left: 60px;">設法將 <a href="https://mde.tw/reeborg/world.html">Reeborg's world</a> (<a href="https://github.com/mdecycu/reeborg">原始碼</a>) 與 cmsimde 網際內容管理系統整合</p>
-<p style="padding-left: 60px;"></p>
-<br />Midterm << <a href='Midterm.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
+    <div id="tipue_search_content">tasks3 << <a href='tasks3.html'>Previous</a> <a href='Homework.html'>Next</a> >> Homework<br /><h1>task3</h1>
+<h4>使用 Nginx 建立全球資訊網伺服器</h4>
+<h4>HTML 中的 CSS 與 Javascript</h4>
+<h4>Windows 環境中的 WWW server</h4>
+<h4>Ubuntu 環境中的 WWW server</h4>
+<hr/>
+<p>Windows:</p>
+<p><a href="https://software.nfu.edu.tw/Windows/tw/Win_10_22H2.4_64BIT_Ch.ISO">https://software.nfu.edu.tw/Windows/tw/Win_10_22H2.4_64BIT_Ch.ISO</a></p>
+<p><a href="http://229.cycu.org/win10.vdi">http://229.cycu.org/win10.vdi</a> </p>
+<p>利用 nssm 將 nginx.exe 設為系統服務</p>
+<p>必須使用管理者的 cmd, 然後執行 nssm install nginx, nssm edit nginx, nssm remove nginx</p>
+<p>nginx.conf </p>
+<div>
+<div class="syntaxhighlighter js" id="highlighter_356025">
+<div class="line number1 index0 alt2">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#user  nobody;
+worker_processes  1;
+ 
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+ 
+#pid        logs/nginx.pid;
+ 
+ 
+events {
+    worker_connections  1024;
+}
+ 
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+ 
+    sendfile        on;
+    keepalive_timeout  65;
+ 
+    server {
+        # a0xx 中的 xx 為上課時的學員序號
+        # https://mdewcm2025.github.io/hw-scrum-1/downloads/1a_stud.txt
+        listen [2001:288:6004:17:fff1:cc25::a0xx]:80;
+       # server_name  your-domain.com;
+ 
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+ 
+        error_page 404 /404.html;
+        location = /40x.html {
+        }
+ 
+        error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+        }
+    }
+}</pre>
+</div>
+</div>
+</div>
+<p>Ubuntu:</p>
+<p><a href="http://229.cycu.org/ubuntu-24.04.2-live-server-amd64.iso">ubuntu-24.04.2-live-server-amd64.iso</a></p>
+<p><a href="http://229.cycu.org/ubuntu.vdi">http://229.cycu.org/ubuntu.vdi</a> </p>
+<p>Virtualbox:</p>
+<p><a href="http://229.cycu.org/VirtualBox-7.1.6-167084-Win.exe">VirtualBox-7.1.6-167084-Win.exe</a></p>
+<p><a href="http://229.cycu.org/Portable-Virtualbox.7z">Portable-Virtualbox.7z</a></p>
+<p>在同一個 Virtualbox 設定下, 使用同一個 .vdi, 必須要先修改其 UUID:</p>
+<p>"C:\Program Files\Oracle\VirtualBox\VBoxManage" internalcommands sethduuid c:\users\yen\downloads\win10.vdi</p><br />tasks3 << <a href='tasks3.html'>Previous</a> <a href='Homework.html'>Next</a> >> Homework</div>
         
     <!-- footer -->
       <div class="container">
