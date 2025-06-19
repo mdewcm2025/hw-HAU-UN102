@@ -27,6 +27,7 @@
 <p style="padding-left: 90px;">設法將 <a href="https://mde.tw/reeborg/world.html">Reeborg's world</a> (<a href="https://github.com/mdecycu/reeborg">原始碼</a>) 與 cmsimde 網際內容管理系統整合</p>
 <h2>git</h2>
 <h3>w1</h3>
+<h2>Fossil</h2>
 <h4><span>git 指令與 github 倉儲練習:</span></h4>
 <p>以下練習將利用電腦輔助設計室中 C: 既有的可攜程式環境, 在近端建立一個 git 倉儲, 然後與 Github 上空白的倉儲進行對應. 完成後使用者可在多個地點將 Github 上的倉儲以 git clone 取下進行改版. 當近端某一舊倉儲版本落後 Github 上倉儲版本時, 則可利用 git pull 取下遠端新增的版本資料後繼續改版. 完成後再新增提交推送至 Github 倉儲.</p>
 <p>練習步驟:</p>
@@ -138,7 +139,8 @@
 </div>
 <p><br/><span>SSH 使用設定:</span></p>
 <p>在 Windows 操作系統中可以採用 Putty 設定 SSH 協定認證過程中, 登錄至 Github key server 中所需的 OpenSSH 格式鑰匙 (此鑰匙稱為 public key, 也可以將其視為進入 github.com 門上的鎖頭, 因為大家從外面就可以看得到), 另外 Putty 建立 public key 同時, 在近端可以儲存與公鑰認證對應的 private key, 也就是私鑰, 而此私鑰的格式則是 Putty 特有的檔案格式, 因此存為 .ppk, 也就是 putty private key 的意思.</p>
-<p>通常在帶有還原卡的電腦上工作, 此把私鑰會存在隨身碟中, 並在啟動可攜程式環境之後, 將私鑰相關設定的 session 透過 .reg 檔案存回 Windows 操作系統的登錄檔案中. 而這個 Putty session 的設定登錄檔案將會被存入 HKEY_CURRENT_USER - SOFTWARE - SimonTatham 中. 因此設定完成後必須將此登錄檔匯出, 並在下一次啟動可攜程式環境時匯入. 若不是在帶有還原卡的電腦上進行設定, 則只需要設定一次便可使用.</p><h1>tasks</h1>
+<p>通常在帶有還原卡的電腦上工作, 此把私鑰會存在隨身碟中, 並在啟動可攜程式環境之後, 將私鑰相關設定的 session 透過 .reg 檔案存回 Windows 操作系統的登錄檔案中. 而這個 Putty session 的設定登錄檔案將會被存入 HKEY_CURRENT_USER - SOFTWARE - SimonTatham 中. 因此設定完成後必須將此登錄檔匯出, 並在下一次啟動可攜程式環境時匯入. 若不是在帶有還原卡的電腦上進行設定, 則只需要設定一次便可使用.</p>
+<h1>tasks</h1>
 <h2>tasks1</h2>
 <h4>自行製作可攜程式系統</h4>
 <p>此作業的目的在展示如何利用既有的 Python 可攜系統建立各版本的 Python 可攜環境.</p>
